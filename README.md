@@ -1,4 +1,4 @@
-# TBMUDCUMFMC
+# Deep Cross-User Models to Reduce the Training Burden in Myoelectric Control
 The code is currently being refactored to make a better interface for the training procedure.
  -- removing static referencing
  -- dynamically adapt the channel count (amputee and intact-limb have different channel configurations), so it isn't hard coded.
