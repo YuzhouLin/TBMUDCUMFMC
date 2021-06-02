@@ -6,7 +6,7 @@ def main():
 
     # load data from original datasets
     intact_subjs = [1,2,3,4,5,6,7,8,9,10]#[2,3,4,7,9,10,11]#[2,3,4,7,8,9,10,11]
-    intact_dir = "D:/EMG-ACC Project/[EMG] SCHEME 1vs1 Classifier (Offline)"
+    intact_dir = "SCHEME1vs1Dir"
     num_amp_subj = len(intact_subjs)
     class_list = [1,2,3,4,5,8,10]
 

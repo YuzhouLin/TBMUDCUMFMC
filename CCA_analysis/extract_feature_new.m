@@ -5,15 +5,15 @@ info = [];
 
 switch(dataset)
     case 'NinaPro7'
-        dataset_dir = '[EMG-ACC] NinaPro7';
+        dataset_dir = 'NinaPro7Dir';
     case 'NinaPro2'
-        dataset_dir = '[EMG-ACC] NinaPro2';
+        dataset_dir = 'NinaPro2Dir';
 end
 
 files = [];
 for s = 1:length(subject)
     for c = 1:length(classes)
-        files = [files ; dir(['D:\[EMG-ACC] Project\' dataset_dir '\S' num2str(subject(s)) '\S' num2str(subject(s)) '_C' num2str(classes(c)) '_*'])];
+        files = [files ; dir([ dataset_dir '\S' num2str(subject(s)) '\S' num2str(subject(s)) '_C' num2str(classes(c)) '_*'])];
     end
 end
 

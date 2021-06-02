@@ -6,13 +6,13 @@ def main():
 
     # load data from original datasets
     Ninapro3_subjs = [2,3,4,9,10,11]#[2,3,4,7,9,10,11]#[2,3,4,7,8,9,10,11]
-    Ninapro3_dir = "D:/EMG-ACC Project/[EMG-ACC] NinaPro3"
+    Ninapro3_dir = "NinaPro3Dir"
     num_np3_subj = len(Ninapro3_subjs)
     class_list = [17,18,21,22,25,26]#[17,18,21,22,25,26,27,28]
 
     
     Ninapro7_subjs = [21,22]
-    Ninapro7_dir = "D:/EMG-ACC Project/[EMG-ACC] NinaPro7"
+    Ninapro7_dir = "NinaPro7Dir"
     num_np7_subj = len(Ninapro7_subjs)
 
     # save data in format that mimics 3DC dataset

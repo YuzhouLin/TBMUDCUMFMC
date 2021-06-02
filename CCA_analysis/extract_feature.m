@@ -7,11 +7,11 @@ switch(dataset)
     case 'Fougner'
         FS = 1000;
         channel = {1:8, 9:14};
-	dataset_dir = '[EMG-ACC] SCHEME Effect of Static Position (Fougner)';
+	dataset_dir = 'SCHEME(Fougner)';
     case 'NinaPro7'
         FS = 2000;
         channel = {1:12, 13:48};
-	dataset_dir = '[EMG] Ninapro7';
+	dataset_dir = 'Ninapro7Dir';
 end
 
 winsize = winsize*FS/1000;
@@ -49,7 +49,7 @@ end
 files = [];
 for s = 1:length(subject)
     for c = 1:length(classes)
-        files = [files ; dir(['C:\Users\ecampbe2\Desktop\[ACC] Datasets\' dataset_dir '\S' num2str(subject(s)) '\S' num2str(subject(s)) '_C' num2str(classes(c)) '_*'])];
+        files = [files ; dir([dataset_dir '\S' num2str(subject(s)) '\S' num2str(subject(s)) '_C' num2str(classes(c)) '_*'])];
     end
 end
 

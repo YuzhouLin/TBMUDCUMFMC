@@ -3,7 +3,7 @@ figure()
 fs = 'EMGTD';
 
 for s1 = 1:60
-    results = load(['D:\[EMG-ACC] Project\[THESIS] Baseline Subject Accuracy\Results_Within_Subject\' fs '_S' num2str(s1) '.mat']);
+    results = load(['Results_Within_Subject\' fs '_S' num2str(s1) '.mat']);
     fn = fieldnames(results);
     if strcmp(fn, 'results')
         within_acc(s1) = mean(results.results.Gesture.LDA);
@@ -18,7 +18,7 @@ for s1 = 1:60
         if s1 == s2
             continue
         end
-        results = load(['D:\[EMG-ACC] Project\[THESIS] Baseline Subject Accuracy\Results_Between_Subject_No_CCA\' fs '_S' num2str(s1) '_S' num2str(s2) '.mat']);
+        results = load([Results_Between_Subject_No_CCA\' fs '_S' num2str(s1) '_S' num2str(s2) '.mat']);
         fn = fieldnames(results);
         if strcmp(fn, 'results')
             between_acc(s1,s2) = mean(results.results.Gesture.LDA);
@@ -38,7 +38,7 @@ for r = 1:5
             if s1 == s2
                 continue
             end
-            results = load(['D:\[EMG-ACC] Project\[THESIS] Baseline Subject Accuracy\Results_Between_Subject_CCA\' fs '_R' num2str(r) '_S' num2str(s1) '_S' num2str(s2) '.mat']);
+            results = load([Results_Between_Subject_CCA\' fs '_R' num2str(r) '_S' num2str(s1) '_S' num2str(s2) '.mat']);
             fn = fieldnames(results);
             if strcmp(fn, 'results')
             acc_cca_r(s1,s2) = mean(results.results.Gesture.LDA);
